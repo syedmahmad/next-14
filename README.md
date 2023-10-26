@@ -22,13 +22,12 @@ Welcome to My Exagon Landing page! This README will guide you through setting up
 Your application will be available at `http://localhost:3000`.
 
 4. **Enforcing Best Practices Via Husky:**
-   
+
 This command gives execute permission to the pre-commit script.
 
     chmod +x .husky/pre-commit
 
 Whenever, you make commit, husky will auto formte the code first then try to fix all linting errors.
-
 
 ## Building for Production
 
