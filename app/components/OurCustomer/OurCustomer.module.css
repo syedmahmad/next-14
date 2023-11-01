@@ -61,6 +61,11 @@
   font-style: normal;
   font-weight: 500;
   line-height: 1.5rem;
+  display: flex;
+  width: 22.66688rem;
+  padding: 0rem 2.67188rem 0rem 2.6825rem;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .bottomArea {

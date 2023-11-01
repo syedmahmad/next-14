@@ -49,28 +49,26 @@ img {
   height: inherit !important;
 }
 
-.slick-arrow {
-  display: block;
-  width: 73px;
-  height: 74px;
-}
-
 .slick-prev {
   position: absolute !important;
-  left: 45% !important;
-  top: 108% !important;
+  left: 44% !important;
+  top: 118% !important;
+  width: 73px !important;
+  height: 74px !important;
 }
 
-.slick-next:before {
+/* .slick-next:before {
   display: none;
 }
 
 .slick-prev:before {
   display: none;
-}
+} */
 
 .slick-next {
   position: absolute !important;
-  left: 51% !important;
-  top: 108% !important;
+  left: 52% !important;
+  top: 118% !important;
+  width: 73px !important;
+  height: 74px !important;
 }

@@ -1,7 +1,10 @@
 import React from 'react';
 import styles from './FooterSection.module.css';
 import PinkLogo from '../../../public/images/svgs/pinkLogo';
-import ContactIcons from '../../../public/images/svgs/contact-icons';
+import Phone from '../../../public/images/svgs/phone';
+import Email from '../../../public/images/svgs/email';
+import Instagram from '../../../public/images/svgs/insta';
+import Facebook from '../../../public/images/svgs/facebook';
 
 const FooterSection = () => {
   return (
@@ -12,10 +15,21 @@ const FooterSection = () => {
         </h2>
       </div>
       <div className={styles.headingContainer}>
-        <h2 className={styles.mainHeading}>
-          <ContactIcons />
-        </h2>
+        <div className={styles.blueBox}>
+          <Phone />
+        </div>
+        <div className={styles.blueBox}>
+          <Email />
+        </div>
+        <div className={styles.blueBox}>
+          <Instagram />
+        </div>
+        <div className={styles.blueBox}>
+          <Facebook />
+        </div>
       </div>
+      <br />
+      <br />
       <div className={styles.headingContainer}>
         <h2 className={styles.paragraph}>
           Exagon Plus sagl - Via Carlo Pasta 116850 Mendrisio Ticino,
