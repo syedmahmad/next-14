@@ -23,12 +23,12 @@
   width: 42%;
 }
 
-.blueBox{
+.blueBox {
   width: 2.89025rem;
   height: 3.0625rem;
   flex-shrink: 0;
   border-radius: 0.125rem;
-  background: #2645E6;
+  background: #2645e6;
   margin: 0px 2.8px;
   display: flex;
   justify-content: center;
