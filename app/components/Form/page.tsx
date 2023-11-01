@@ -17,8 +17,13 @@ const Form = () => {
       onSubmit={(event) => {
         event.preventDefault(); // Prevent the default form submission
         // Get the form data
-        const formData = new FormData({});
-        console.log(formData, state);
+        const formData = new FormData();
+
+        formData.append('first_name', state.first_name);
+        formData.append('last_name', state.last_name);
+        formData.append('mobile', state.mobile);
+        formData.append('email', state.email);
+        formData.append('privacy', state.privacy);
         // Specify the URL you want to POST to
         const url = 'http://localhost:3002/api/requestdemo';
 
