@@ -9,14 +9,18 @@ import GrowSalon from './components/GrowSalon/page';
 import AlreadyChosen from './components/AlreadyChosen/page';
 import ExagonInAction from './components/ExagonInAction/page';
 import FooterSection from './components/FooterSection/page';
+import Form from './components/Form/page';
 
 export default function Page() {
   return (
     <div className={styles.mainContainer} id="main">
       <Header />
-      <div>
+      <div className={styles.positionRelative}>
         <div className={styles.heroSectionBackground}>
           <HeroSection />
+        </div>
+        <div className={styles.formArea}>
+          <Form />
         </div>
       </div>
       <div className={styles.ourCustomerBackground}>

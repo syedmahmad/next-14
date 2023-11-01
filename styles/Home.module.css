@@ -59,3 +59,14 @@
   width: 100%;
   clip-path: polygon(50% 0%, 100% 29%, 100% 100%, 0 100%, 0 31%);
 }
+
+.formArea {
+  width: 48%;
+  position: absolute;
+  top: 185px;
+  left: 50%;
+}
+
+.positionRelative {
+  position: relative;
+}

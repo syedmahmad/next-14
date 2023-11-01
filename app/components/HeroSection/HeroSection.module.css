@@ -26,17 +26,13 @@
   margin: 0 auto;
   justify-content: space-between;
   width: 100%;
-  padding: 80px 140px;
+  padding: 80px 140px 40px;
   height: fit-content;
 }
 
 .textArea {
   width: 48%;
   height: fit-content;
-}
-
-.formArea {
-  width: 48%;
 }
 
 .heading {
