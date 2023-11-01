@@ -3,10 +3,6 @@ import '../styles/global.css';
 
 // https://nextjs.org/docs/app/building-your-application/optimizing/metadata
 export const metadata: Metadata = {
-  metadataBase:
-    process.env.NODE_ENV !== 'production'
-      ? new URL('http://localhost:3000')
-      : new URL(''),
   title: 'Exagon Landing Page',
   description: 'descirpiton of exagon',
 };
