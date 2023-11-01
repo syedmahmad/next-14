@@ -1,12 +1,16 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Logo from '../../../public/images/svgs/logo';
 import Phone from '../../../public/images/pngs/phone.png';
 import styles from './Header.module.css';
+import { useScroll } from '../../hooks/useScroll';
 
 const Header = () => {
+  const show = useScroll();
   return (
-    <div className={styles.main}>
+    <div className={`${show ? styles.main : styles.hidden}`}>
       <div className={styles._1stChild}>
         <div>
           <Logo />

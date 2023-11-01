@@ -12,7 +12,7 @@ import FooterSection from './components/FooterSection/page';
 
 export default function Page() {
   return (
-    <div className={styles.mainContainer}>
+    <div className={styles.mainContainer} id="main">
       <Header />
       <div>
         <div className={styles.heroSectionBackground}>
