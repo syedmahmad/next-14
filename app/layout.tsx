@@ -1,18 +1,28 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-import Footer from './components/footer';
-import Welcome from './components/welcome';
+import { Metadata } from 'next';
+import '../styles/global.css';
+
+// https://nextjs.org/docs/app/building-your-application/optimizing/metadata
+export const metadata: Metadata = {
+  metadataBase:
+    process.env.NODE_ENV !== 'production'
+      ? new URL('http://localhost:3000')
+      : new URL(''),
+  title: 'Exagon Landing Page',
+  description: 'descirpiton of exagon',
+};
 
 export default function Layout({ children }) {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
+    <html>
+      <head>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
-      {children}
-      <Welcome />
-      <Footer />
-    </div>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+        <meta charSet="utf-8" />
+      </head>
+      <body>{children}</body>
+    </html>
   );
 }

@@ -1,0 +1,53 @@
+.container {
+  height: fit-content;
+  width: 100%;
+  padding: 150px 140px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.mainHeading {
+  color: #222;
+  font-family: Poppins;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.75rem;
+  text-align: center;
+}
+
+.displayMain {
+  padding: 30px 0px;
+  width: 100%;
+}
+
+.itemContainer {
+  padding: 2.5rem;
+  border-radius: 0.1875rem;
+  background: rgba(38, 69, 230, 0.2);
+}
+
+.paragraph {
+  color: #2645e6;
+  font-family: Poppins;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2rem;
+}
+
+.nameParagraph {
+  color: #2645e6;
+  font-family: Inter;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6875rem;
+  letter-spacing: -0.01913rem;
+}
+
+.iconContainer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}

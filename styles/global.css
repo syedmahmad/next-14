@@ -30,3 +30,47 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* the slides */
+.slick-slide {
+  margin: 0 16px;
+}
+
+/* the parent */
+.slick-list {
+  margin: 0 -16px;
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: inherit !important;
+}
+
+.slick-arrow {
+  display: block;
+  width: 73px;
+  height: 74px;
+}
+
+.slick-prev {
+  position: absolute !important;
+  left: 45% !important;
+  top: 108% !important;
+}
+
+.slick-next:before {
+  display: none;
+}
+
+.slick-prev:before {
+  display: none;
+}
+
+.slick-next {
+  position: absolute !important;
+  left: 51% !important;
+  top: 108% !important;
+}

@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
+    "dev": "next -p 3002 && next dev",
     "start": "next start",
     "prepare": "npx husky install",
     "lint": "next lint",
@@ -10,14 +10,20 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@storybook/react": "^7.5.1",
     "next": "latest",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-bootstrap-icons": "^1.10.3",
+    "react-dom": "18.2.0",
+    "react-slick": "^0.29.0",
+    "react-use-scroll-direction": "^0.1.0",
+    "slick-carousel": "^1.8.1"
   },
   "engines": {
     "node": ">=18"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.6",
     "@types/node": "20.8.9",
     "@types/react": "18.2.33",
     "@typescript-eslint/eslint-plugin": "^6.9.0",

@@ -1,0 +1,41 @@
+.main {
+  height: 75px;
+  width: 100%;
+  background-color: #2645e6;
+  padding: 10px 40px;
+  position: fixed;
+  z-index: 99;
+}
+
+._1stChild {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+}
+
+.phoneNumberContainer {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 3.75rem; /* 375% */
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+
+.demoButton {
+  height: 47px;
+  width: 244px;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1.5px solid #fff;
+  margin: 0 10px;
+}
