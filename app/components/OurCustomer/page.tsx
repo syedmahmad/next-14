@@ -36,7 +36,7 @@ const OurCustomer = () => {
     dots: false,
     autoplay: true,
     infinite: true,
-    speed: 300,
+    speed: 100,
     slidesToShow: 4,
     slidesToScroll: 1,
   };

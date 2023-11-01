@@ -18,7 +18,6 @@ export default function Page() {
         <div className={styles.heroSectionBackground}>
           <HeroSection />
         </div>
-        <div className={styles.whiteCurve}></div>
       </div>
       <div className={styles.ourCustomerBackground}>
         <OurCustomer />
