@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import styles from './GrowSalon.module.css';
@@ -10,7 +10,6 @@ import Colorami from '../../../public/images/pngs/LOGO_EXT_BLACK_2X-1 1.png';
 import { useFocus } from '../../hooks/useFocus';
 
 const GrowSalon = () => {
-
   const handleClick = useFocus();
 
   return (
@@ -30,7 +29,9 @@ const GrowSalon = () => {
             delle clienti attuali e recuperare le clienti fuori-frequenza.
           </p>
           <br />
-          <button className={styles.button} onClick={handleClick}>richiedi demo GRATUITA</button>
+          <button className={styles.button} onClick={handleClick}>
+            richiedi demo GRATUITA
+          </button>
         </div>
       </div>
       <div className={styles.imageContainer}>

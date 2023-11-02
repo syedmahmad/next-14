@@ -24,7 +24,9 @@ const Header = () => {
               <div className={styles.phoneNumberContainer}>333 3334566</div>
             </div>
           </a>
-          <button className={styles.demoButton} onClick={handleClick}>RICHIEDI DEMO GRATUITA</button>
+          <button className={styles.demoButton} onClick={handleClick}>
+            RICHIEDI DEMO GRATUITA
+          </button>
         </div>
       </div>
     </div>

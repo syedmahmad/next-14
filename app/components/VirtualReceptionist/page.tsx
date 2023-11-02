@@ -1,11 +1,10 @@
-'use client'
+'use client';
 import React from 'react';
 import styles from './VirtualReceptionist.module.css';
 import VirtualReceptionistImage from '../../../public/images/svgs/virtualReceptionistImage';
 import { useFocus } from '../../hooks/useFocus';
 
 const VirtualReceptionist = () => {
-
   const handleClick = useFocus();
 
   return (
@@ -27,7 +26,9 @@ const VirtualReceptionist = () => {
             ridurre al minimo le cancellazioni ed i ritardi delle clienti
           </p>
           <br />
-          <button className={styles.button} onClick={handleClick}>richiedi demo GRATUITA</button>
+          <button className={styles.button} onClick={handleClick}>
+            richiedi demo GRATUITA
+          </button>
         </div>
       </div>
       <div className={styles.imageContainer}>

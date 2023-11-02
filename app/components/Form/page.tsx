@@ -88,16 +88,14 @@ const Form = () => {
       </div>
       <br />
       <div>
-      <PhoneInput
-        country={'it'}
-        regions={'europe'}
-        inputClass={styles.inputField}
-        placeholder="Numero di telefono"
-        value={state.mobile}
-        onChange={(phone) =>
-          setState({ ...state, mobile: phone })
-        }
-      />
+        <PhoneInput
+          country={'it'}
+          regions={'europe'}
+          inputClass={styles.inputField}
+          placeholder="Numero di telefono"
+          value={state.mobile}
+          onChange={(phone) => setState({ ...state, mobile: phone })}
+        />
       </div>
       <br />
       <div>
@@ -120,9 +118,9 @@ const Form = () => {
               value={state.privacy}
               onChange={(event) => {
                 if (event.target.checked) {
-                  setState({ ...state, privacy: 1 })
+                  setState({ ...state, privacy: 1 });
                 } else {
-                  setState({ ...state, privacy: 0 })
+                  setState({ ...state, privacy: 0 });
                 }
               }}
             />
