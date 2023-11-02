@@ -7,17 +7,7 @@ export async function POST(request: Request) {
   const email = formData.get('email');
   const privacy = formData.get('privacy');
 
-  console.log(
-    'formData',
-    first_name,
-    last_name,
-    mobile,
-    email,
-    privacy,
-    process.env.token,
-  );
-
-  const res = await fetch('https://api.exagonplus.com/v1/landing', {
+  const res = await fetch(process.env.form_url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

@@ -82,8 +82,9 @@
 }
 
 .button:hover {
-  background: #bf558b;
-  border: 1.5px solid #bf558b;
+  background: #ff5683;
+  border: 1.5px solid #ff5683;
+  animation: opacity linear 300ms;
 }
 
 .inputField {
@@ -168,4 +169,13 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+@keyframes opacity {
+  0% {
+    background: #f92f65;
+  }
+  100% {
+    background: #ff5683;
+  }
 }

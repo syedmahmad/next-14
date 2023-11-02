@@ -13,24 +13,6 @@
   animation-fill-mode: both;
 }
 
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .hidden {
   -webkit-animation-duration: 300ms;
   animation-duration: 300ms;
@@ -39,27 +21,6 @@
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
   display: none;
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
 ._1stChild {
@@ -98,4 +59,41 @@
 .demoButton:hover {
   color: #2645e6;
   background: #fff;
+  animation: opacity linear 300ms;
+}
+
+@keyframes opacity {
+  0% {
+    background: #2645e6;
+  }
+  100% {
+    background: #4f68e9;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

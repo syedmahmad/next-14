@@ -54,6 +54,16 @@
 }
 
 .demoButton:hover {
-  background: #4c6bac;
-  border: 1.5px solid #4c6bac;
+  background: #4f68e9;
+  border: 1.5px solid #4f68e9;
+  animation: opacity linear 300ms;
+}
+
+@keyframes opacity {
+  0% {
+    background: #2645e6;
+  }
+  100% {
+    background: #4f68e9;
+  }
 }

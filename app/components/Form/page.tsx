@@ -36,7 +36,7 @@ const Form = () => {
           return;
         }
         // Specify the URL you want to POST to
-        const url = 'http://localhost:3002/api/requestdemo';
+        const url = `${process.env.NEXT_PUBLIC_SITE_URL}/api/requestdemo`;
 
         fetch(url, {
           method: 'POST',
