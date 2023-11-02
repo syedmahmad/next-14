@@ -68,7 +68,7 @@
   text-transform: uppercase;
 }
 
-.button:hover{
-  background: #4C6BAC;
-  border: 1.5px solid #4C6BAC;
+.button:hover {
+  background: #4c6bac;
+  border: 1.5px solid #4c6bac;
 }

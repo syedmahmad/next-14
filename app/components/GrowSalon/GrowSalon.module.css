@@ -67,9 +67,9 @@
   cursor: pointer;
 }
 
-.button:hover{
-  background: #BF558B;
-  border: 1.5px solid #BF558B;
+.button:hover {
+  background: #bf558b;
+  border: 1.5px solid #bf558b;
 }
 
 .bottomArea {
