@@ -15,6 +15,7 @@
   font-weight: 700;
   line-height: 3rem; /* 160% */
   letter-spacing: -0.055rem;
+  margin: 50px 0;
 }
 
 .displayMain {
@@ -66,6 +67,7 @@
   padding: 0rem 2.67188rem 0rem 2.6825rem;
   justify-content: center;
   align-items: flex-start;
+  height: 130px;
 }
 
 .bottomArea {

@@ -57,8 +57,6 @@ const OurCustomer = () => {
           </div>
         ))}
       </div>
-      <br />
-      <br />
       <div className={styles.bottomArea}>
         <h2 className={styles.bottomHeading}>
           UNISCITI AI +10.000 SALONI CHE HANNO SCELTO DI CAMBIARE A EXAGON SALON
