@@ -1,5 +1,7 @@
 'use client';
 import React, { useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import styles from './Form.module.css';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
@@ -29,6 +31,10 @@ const Form = () => {
         formData.append('mobile', state.mobile);
         formData.append('email', state.email);
         formData.append('privacy', `${state.privacy}`);
+        if (state.privacy === 0) {
+          toast.warning(`Privacy value must be 1`);
+          return;
+        }
         // Specify the URL you want to POST to
         const url = 'http://localhost:3002/api/requestdemo';
 
@@ -39,19 +45,20 @@ const Form = () => {
           .then((response) => {
             if (response.ok) {
               // Handle the successful response here
-              console.log('POST request was successful!');
+              toast.success(`Thenk you`);
               setState(initalState);
             } else {
               // Handle errors
-              console.error('POST request failed!');
+              toast.error(`Something went wrong! Please try again.`);
               setState(initalState);
             }
           })
-          .catch((error) => {
-            console.error('An error occurred:', error);
+          .catch(() => {
+            toast.error(`Something went wrong! Please try again.`);
           });
       }}
     >
+      <ToastContainer />
       <h1 className={styles.heading}>Richiedi demo gratuita</h1>
       <h4 className={styles.subheading}>
         Dai una svolta al tuo salone!
@@ -68,6 +75,7 @@ const Form = () => {
             className={styles.inputField}
             placeholder="Nome"
             type="text"
+            required
             value={state.first_name}
             onChange={(event) =>
               setState({ ...state, first_name: event.target.value })
@@ -79,6 +87,7 @@ const Form = () => {
             className={styles.inputField}
             placeholder="Cognome"
             value={state.last_name}
+            required
             type="text"
             onChange={(event) =>
               setState({ ...state, last_name: event.target.value })
@@ -92,6 +101,9 @@ const Form = () => {
           country={'it'}
           regions={'europe'}
           inputClass={styles.inputField}
+          inputProps={{
+            required: true,
+          }}
           placeholder="Numero di telefono"
           value={state.mobile}
           onChange={(phone) => setState({ ...state, mobile: phone })}
@@ -103,6 +115,7 @@ const Form = () => {
           className={styles.inputField}
           placeholder="Indirizzo email"
           type="email"
+          required
           value={state.email}
           onChange={(event) =>
             setState({ ...state, email: event.target.value })

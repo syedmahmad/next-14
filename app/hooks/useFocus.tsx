@@ -2,10 +2,10 @@
 
 export const useFocus = () => {
   const handleClick = () => {
-    const input = document.getElementById('input-name');
+    // const input = document.getElementById('input-name');
     const container = document.getElementById('form-container');
     container.scrollIntoView({ behavior: 'smooth' });
-    input.focus();
+    // input.focus();
   };
 
   return handleClick;
