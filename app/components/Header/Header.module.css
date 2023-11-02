@@ -65,9 +65,11 @@
 @keyframes opacity {
   0% {
     background: #2645e6;
+    color: #fff;
   }
   100% {
-    background: #4f68e9;
+    background: #fff;
+    color: #2645e6;
   }
 }
 
