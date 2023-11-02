@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
 import styles from './GrowSalon.module.css';
@@ -6,8 +7,12 @@ import CorriereDellaSera from '../../../public/images/pngs/corriere-della-sera.p
 import Cosmoprof from '../../../public/images/svgs/cosmoprof';
 import LogoIstituzionaleCosmeticaItaliaNoSfondo from '../../../public/images/pngs/logo-istituzionale_cosmetica-italia-no-sfondo.png';
 import Colorami from '../../../public/images/pngs/LOGO_EXT_BLACK_2X-1 1.png';
+import { useFocus } from '../../hooks/useFocus';
 
 const GrowSalon = () => {
+
+  const handleClick = useFocus();
+
   return (
     <div className={styles.container}>
       <div className={styles.displayMain}>
@@ -25,7 +30,7 @@ const GrowSalon = () => {
             delle clienti attuali e recuperare le clienti fuori-frequenza.
           </p>
           <br />
-          <button className={styles.button}>richiedi demo GRATUITA</button>
+          <button className={styles.button} onClick={handleClick}>richiedi demo GRATUITA</button>
         </div>
       </div>
       <div className={styles.imageContainer}>

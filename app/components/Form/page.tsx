@@ -1,18 +1,23 @@
 'use client';
 import React, { useState } from 'react';
 import styles from './Form.module.css';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
+
+const initalState = {
+  first_name: '',
+  last_name: '',
+  mobile: '',
+  email: '',
+  privacy: 0,
+};
 
 const Form = () => {
-  const [state, setState] = useState({
-    first_name: '',
-    last_name: '',
-    mobile: '',
-    email: '',
-    privacy: '',
-  });
+  const [state, setState] = useState(initalState);
 
   return (
     <form
+      id="form-container"
       className={styles.formContainer}
       onSubmit={(event) => {
         event.preventDefault(); // Prevent the default form submission
@@ -23,7 +28,7 @@ const Form = () => {
         formData.append('last_name', state.last_name);
         formData.append('mobile', state.mobile);
         formData.append('email', state.email);
-        formData.append('privacy', state.privacy);
+        formData.append('privacy', `${state.privacy}`);
         // Specify the URL you want to POST to
         const url = 'http://localhost:3002/api/requestdemo';
 
@@ -35,9 +40,11 @@ const Form = () => {
             if (response.ok) {
               // Handle the successful response here
               console.log('POST request was successful!');
+              setState(initalState);
             } else {
               // Handle errors
               console.error('POST request failed!');
+              setState(initalState);
             }
           })
           .catch((error) => {
@@ -57,6 +64,7 @@ const Form = () => {
       <div className={styles.flex}>
         <div className={styles.flexchild}>
           <input
+            id="input-name"
             className={styles.inputField}
             placeholder="Nome"
             type="text"
@@ -80,15 +88,16 @@ const Form = () => {
       </div>
       <br />
       <div>
-        <input
-          className={styles.inputField}
-          placeholder="Numero di telefono"
-          type="number"
-          value={state.mobile}
-          onChange={(event) =>
-            setState({ ...state, mobile: event.target.value })
-          }
-        />
+      <PhoneInput
+        country={'it'}
+        regions={'europe'}
+        inputClass={styles.inputField}
+        placeholder="Numero di telefono"
+        value={state.mobile}
+        onChange={(phone) =>
+          setState({ ...state, mobile: phone })
+        }
+      />
       </div>
       <br />
       <div>
@@ -109,9 +118,13 @@ const Form = () => {
             <input
               type="checkbox"
               value={state.privacy}
-              onChange={(event) =>
-                setState({ ...state, privacy: event.target.value })
-              }
+              onChange={(event) => {
+                if (event.target.checked) {
+                  setState({ ...state, privacy: 1 })
+                } else {
+                  setState({ ...state, privacy: 0 })
+                }
+              }}
             />
             <span className={`${styles.slider} ${styles.round}`}></span>
           </label>

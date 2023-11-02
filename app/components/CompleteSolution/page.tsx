@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import styles from './CompleteSolution.module.css';
 import Icon1 from '../../../public/images/svgs/icon1';
@@ -9,6 +10,7 @@ import Icon6 from '../../../public/images/svgs/icon6';
 import Icon7 from '../../../public/images/svgs/icon7';
 import Icon8 from '../../../public/images/svgs/icon8';
 import Icon9 from '../../../public/images/svgs/icon9';
+import { useFocus } from '../../hooks/useFocus';
 
 const solutions = [
   {
@@ -67,6 +69,9 @@ const solutions = [
 ];
 
 const CompleteSolution = () => {
+
+  const handleClick = useFocus();
+
   return (
     <div className={styles.container}>
       <div className={styles.headingContainer}>
@@ -86,7 +91,7 @@ const CompleteSolution = () => {
       <br />
       <br />
       <div className={styles.buttonContainer}>
-        <button className={styles.button}>richiedi demo GRATUITA</button>
+        <button className={styles.button} onClick={handleClick}>richiedi demo GRATUITA</button>
       </div>
     </div>
   );

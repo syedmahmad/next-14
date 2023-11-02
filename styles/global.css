@@ -72,3 +72,11 @@ img {
   width: 73px !important;
   height: 74px !important;
 }
+
+.special-label{
+  display: none;
+}
+
+.form-control{ 
+  padding-left: 50px !important;
+}
