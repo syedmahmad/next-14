@@ -64,6 +64,12 @@
   line-height: 1.6875rem;
   letter-spacing: 0.10813rem;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button:hover{
+  background: #BF558B;
+  border: 1.5px solid #BF558B;
 }
 
 .bottomArea {

@@ -50,4 +50,10 @@
   line-height: 1.6875rem; /* 192.857% */
   letter-spacing: 0.10813rem;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+.demoButton:hover{
+  background: #4C6BAC;
+  border: 1.5px solid #4C6BAC;
 }

@@ -69,3 +69,8 @@
   border: 1.5px solid #fff;
   margin: 0 10px;
 }
+
+.demoButton:hover{
+  color: #2645E6;
+  background: #fff;
+}

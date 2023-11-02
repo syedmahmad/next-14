@@ -19,7 +19,7 @@ const customers = [
     description: 'Ci scelgono ogni giorno',
   },
   {
-    heading: '1 , 5 Milioni',
+    heading: '1,5 Milioni',
     subHeading: 'prenotazioni',
     description: 'Create e gestite nella nostra agenda ogni mese',
   },
@@ -36,9 +36,12 @@ const OurCustomer = () => {
     dots: false,
     autoplay: true,
     infinite: true,
-    speed: 100,
+    autoplaySpeed: 0,
+    speed: 8000,
     slidesToShow: 4,
     slidesToScroll: 1,
+    cssEase: 'linear',
+    pauseOnHover: false,
   };
 
   return (

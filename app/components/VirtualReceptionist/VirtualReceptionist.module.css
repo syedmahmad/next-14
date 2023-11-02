@@ -67,3 +67,8 @@
   letter-spacing: 0.10813rem;
   text-transform: uppercase;
 }
+
+.button:hover{
+  background: #4C6BAC;
+  border: 1.5px solid #4C6BAC;
+}

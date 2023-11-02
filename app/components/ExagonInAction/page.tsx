@@ -1,7 +1,8 @@
 'use client';
+import Image from 'next/image';
 import React from 'react';
 import styles from './ExagonInAction.module.css';
-import ExagonInActionImage from '../../../public/images/svgs/ExagonInActionImage';
+import ExagonInActionImage from '../../../public/images/pngs/ExagonInActionImage.png';
 import { useFocus } from '../../hooks/useFocus';
 
 const ExagonInAction = () => {
@@ -28,7 +29,7 @@ const ExagonInAction = () => {
       <br />
       <br />
       <div className={styles.centerBox}>
-        <ExagonInActionImage />
+        <Image src={ExagonInActionImage} alt="Image" width={783} height={60} />
       </div>
     </div>
   );
