@@ -64,8 +64,8 @@ const Form = () => {
         Dai una svolta al tuo salone!
         <br />
         <p className={styles.description}>
-          Compila il questionario per prenotare la demo gratuita (e senza
-          impegno!) con un nostro consulente.
+          Compila il questionario per prenotare la demo gratuita e senza impegno
+          con un nostro consulente.
         </p>
       </h4>
       <div className={styles.flex}>

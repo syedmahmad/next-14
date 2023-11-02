@@ -21,10 +21,10 @@ const GrowSalon = () => {
           </h1>
           <p className={styles.paragraph}>
             Sappiamo quanto sia complicato per te oggi occuparti di tutti i vari
-            aspetti del salone! Per questo ci siamo noi ad aiutarti! .
+            aspetti del salone! Per questo ci siamo noi ad aiutarti!
           </p>
           <p className={styles.paragraph}>
-            Insieme a te, imposteremo un sistema di azioni marketing
+            Insieme a te, costruiamo un sistema di azioni marketing
             automatizzate per attrarre clienti nuove, aumentare la frequenza
             delle clienti attuali e recuperare le clienti fuori-frequenza.
           </p>

@@ -12,11 +12,11 @@ const HeroSection = () => {
             <h1 className={styles.heading}>
               SCEGLI EXAGON SALON, IL SOFTWARE CRM PER PARRUCCHIERI #1 IN ITALIA
             </h1>
+            <br />
             <h4 className={styles.description}>
-              Dai una svolta al tuo salone! Exagon Salon ti consente di gestire
-              il salone a 360° gradi in modo semplice per tutti gli aspetti
-              della tua attività.Scegli il software CRM scelto dai più
-              importanti hairstylist e franchising internazionali.
+              Dai una svolta al tuo salone! <br /> Scegli Exagon Salon il
+              software CRM usato dai più importanti hairstylist e franchising
+              internazionali.
             </h4>
             <br />
             <TrustPilot />

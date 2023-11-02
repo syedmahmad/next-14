@@ -17,13 +17,13 @@ const solutions = [
     icon: <Icon1 />,
     heading: 'Prenotazione gratuita',
     description:
-      'Le tue clienti potranno prenotare gratuitamente da ogni dispositivo ed in qualsiasi momento con un semplicl click',
+      'Le tue clienti possono prenotare gratuitamente da ogni dispositivo ed in qualsiasi momento con un semplicl click.',
   },
   {
     icon: <Icon2 />,
     heading: 'Notifiche automatizzate',
     description:
-      'Le tue clienti riceveranno le notifiche dell’appuntamento via Whatsapp o SMS sia al momento della prenotazione sia il giorno prima! In questo modo non avrai più disdette all’ultimo momento!',
+      'Le tue clienti ricevono le notifiche dell’appuntamento via Whatsapp o SMS sia al momento della prenotazione sia il giorno prima! In questo modo non avrai più disdette all’ultimo momento!',
   },
   {
     icon: <Icon3 />,
@@ -47,7 +47,7 @@ const solutions = [
     icon: <Icon6 />,
     heading: 'Gestione magazzino e spese',
     description:
-      'Grazie alla nostra intelligenza artificiale, non devi più impiegare ore e ore per ordinare i prodotti. Inoltre puoi tenere sempre al minimo le scorte evitando gli sprechi inutili.',
+      'Grazie alla nostra intelligenza artificiale, non serve impiegare ore e ore per ordinare i prodotti. Inoltre puoi tenere sempre al minimo le scorte evitando gli sprechi inutili.',
   },
   {
     icon: <Icon7 />,
@@ -59,12 +59,13 @@ const solutions = [
     icon: <Icon8 />,
     heading: 'Obiettivi e kpi',
     description:
-      'Non occorrono troppi numeri per capire come sta andando il salone e su quali aree intervenire! Avrai una dashboard dove analizzare i numeri chiave del tuo salone',
+      'Non occorrono troppi numeri per capire come sta andando il salone e su quali aree intervenire! Usa la nostra dashboard e analizza i numeri chiave del tuo salone',
   },
   {
     icon: <Icon9 />,
     heading: 'Controllo spese',
-    description: 'Sappiamo quanto è importante gestire i numeri in salone.',
+    description:
+      'Sappiamo quanto è importante fare quadrare i conti del tuo salone. Per questo abbiamo creato un sistema semplice per monitorare le spese costantemente.',
   },
 ];
 

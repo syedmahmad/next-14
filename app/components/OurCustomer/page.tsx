@@ -21,13 +21,14 @@ const customers = [
   {
     heading: '1,5 Milioni',
     subHeading: 'prenotazioni',
-    description: 'Create e gestite nella nostra agenda ogni mese',
+    description:
+      'Create e gestite ogni mese in salone oppure online grazie alla nostra agenda digitale',
   },
   {
     heading: '+15.000',
-    subHeading: 'ore',
+    subHeading: 'ore di assistenza',
     description:
-      'Formazione e assistenzaerogate verso i nostri clienti ogni anno',
+      'Formazione e assistenza erogate dal nostro customer care a favore dei saloni',
   },
 ];
 

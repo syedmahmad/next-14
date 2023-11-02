@@ -20,10 +20,10 @@ const VirtualReceptionist = () => {
             organizzato.
           </p>
           <p className={styles.paragraph}>
-            Le clienti potranno prenotarsi in modo autonomo sul tuo sito o
+            Le clienti possono prenotarsi in modo autonomo sul tuo sito o
             attraverso i social media (google, instagram e facebook). Inoltre le
-            clienti riceveranno notifiche automatizzate con Whatsapp o SMS per
-            ridurre al minimo le cancellazioni ed i ritardi delle clienti
+            clienti ricevono notifiche automatizzate con Whatsapp o SMS per
+            ridurre al minimo le cancellazioni ed i ritardi delle clienti.
           </p>
           <br />
           <button className={styles.button} onClick={handleClick}>
