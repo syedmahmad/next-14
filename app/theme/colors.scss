@@ -1,0 +1,46 @@
+// styles/theme.sass
+
+:root {
+  --primaryColor: #2645e6;
+  --primaryColor70: rgba(38, 69, 230, 0.7);
+  --primaryColorDisabled: #92a2f3;
+  --primaryColorHover: #4f68e9;
+
+  --primaryBlackColor: #293641;
+  --primaryBlackColorHover: #525c65;
+  --primaryBlackColorDisabled: #a6acaf;
+  --secondaryLightGreyColor: #9ca6b4;
+  --hardGreyColor: #6e7191;
+  --mediumGreyColor: #9699b7;
+  --lightGreyColor: #dddddd;
+  --softGreyColor: #f8f8f8;
+  --dirtyWhiteColor: #fafafa;
+  --blackColor: #000000;
+  --whiteColor: #ffffff;
+  --alternativeGreenColor: #27ae60;
+  --alternativePurpleColor: #b21f5d;
+
+  //FORM LABEL
+  --form-label-margin: 20px;
+}
+
+.button {
+  --primary: #2645e6;
+  --primaryColor70: rgba(38, 69, 230, 0.7);
+  --primaryColorDisabled: #92a2f3;
+  --primaryColorHover: #4f68e9;
+}
+
+.btn:hover {
+  color: var(--primaryColor);
+  stroke: var(--primaryColor);
+}
+
+.btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.MuiDrawer-modal {
+  inset: unset !important;
+}
