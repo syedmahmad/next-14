@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styles from './Form.module.css';
-import PhoneInput from 'react-phone-input-2'
-import 'react-phone-input-2/lib/style.css'
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 import FormContainer from '../FormComponents/FormContainer/FormContainer';
 import FormTextfield from '../FormComponents/FormTextfield/FormTextfield';
 import { Controller, useForm } from 'react-hook-form';
@@ -25,49 +25,49 @@ const Form = () => {
   const [mobile, setMobile] = useState('');
   const [error, setError] = useState(false);
   const submit = (data: FormInputs) => {
-    if(mobile === '') {
+    if (mobile === '') {
       setError(true);
     } else {
-    setError(false);
-    const formData = new FormData();
+      setError(false);
+      const formData = new FormData();
 
-    formData.append('first_name', data.first_name);
-    formData.append('last_name', data.last_name);
-    formData.append('mobile', mobile);
-    formData.append('email', data.email);
-    formData.append('privacy', `${data.privacy}`);
-    if (data.privacy === 0) {
-      toast.warning(`Privacy value must be 1`);
-      return;
-    }
-    // Specify the URL you want to POST to
-    const url = `${process.env.NEXT_PUBLIC_SITE_URL}/api/requestdemo`;
+      formData.append('first_name', data.first_name);
+      formData.append('last_name', data.last_name);
+      formData.append('mobile', mobile);
+      formData.append('email', data.email);
+      formData.append('privacy', `${data.privacy}`);
+      if (data.privacy === 0) {
+        toast.warning(`Privacy value must be 1`);
+        return;
+      }
+      // Specify the URL you want to POST to
+      const url = `${process.env.NEXT_PUBLIC_SITE_URL}/api/requestdemo`;
 
-    fetch(url, {
-      method: 'POST',
-      body: formData,
-    })
-      .then((response) => {
-        if (response.ok) {
-          // Handle the successful response here
-          toast.success(`Thenk you`);
-          reset();
-          setMobile('');
-          setError(false);
-        } else {
-          // Handle errors
+      fetch(url, {
+        method: 'POST',
+        body: formData,
+      })
+        .then((response) => {
+          if (response.ok) {
+            // Handle the successful response here
+            toast.success(`Thenk you`);
+            reset();
+            setMobile('');
+            setError(false);
+          } else {
+            // Handle errors
+            toast.error(`Something went wrong! Please try again.`);
+            reset();
+            setMobile('');
+            setError(false);
+          }
+        })
+        .catch(() => {
           toast.error(`Something went wrong! Please try again.`);
           reset();
           setMobile('');
           setError(false);
-        }
-      })
-      .catch(() => {
-        toast.error(`Something went wrong! Please try again.`);
-        reset();
-        setMobile('');
-        setError(false);
-      });
+        });
     }
   };
 
