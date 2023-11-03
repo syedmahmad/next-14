@@ -1,14 +1,16 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styles from './Form.module.css';
-import 'react-phone-input-2/lib/style.css';
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 import FormContainer from '../FormComponents/FormContainer/FormContainer';
 import FormTextfield from '../FormComponents/FormTextfield/FormTextfield';
 import { Controller, useForm } from 'react-hook-form';
 import FormValidationPatterns from '../FormComponents/FormValidationPatterns';
 import ExSwitch from '../FormComponents/ExSwitch/ExSwitch';
+import { FormHelperText } from '@mui/material';
 
 type FormInputs = {
   first_name: string;
@@ -20,12 +22,18 @@ type FormInputs = {
 
 const Form = () => {
   const { control, handleSubmit, reset } = useForm<FormInputs>();
+  const [mobile, setMobile] = useState('');
+  const [error, setError] = useState(false);
   const submit = (data: FormInputs) => {
+    if(mobile === '') {
+      setError(true);
+    } else {
+    setError(false);
     const formData = new FormData();
 
     formData.append('first_name', data.first_name);
     formData.append('last_name', data.last_name);
-    formData.append('mobile', data.mobile);
+    formData.append('mobile', mobile);
     formData.append('email', data.email);
     formData.append('privacy', `${data.privacy}`);
     if (data.privacy === 0) {
@@ -44,16 +52,23 @@ const Form = () => {
           // Handle the successful response here
           toast.success(`Thenk you`);
           reset();
+          setMobile('');
+          setError(false);
         } else {
           // Handle errors
           toast.error(`Something went wrong! Please try again.`);
           reset();
+          setMobile('');
+          setError(false);
         }
       })
       .catch(() => {
         toast.error(`Something went wrong! Please try again.`);
         reset();
+        setMobile('');
+        setError(false);
       });
+    }
   };
 
   return (
@@ -118,24 +133,32 @@ const Form = () => {
         </div>
       </div>
       <br />
-      <Controller
-        name="mobile"
-        control={control}
-        defaultValue=""
-        rules={{
+      <PhoneInput
+        country={'it'}
+        inputClass={styles.inputField}
+        regions={'europe'}
+        inputProps={{
+          name: 'mobile',
           required: true,
-          validate: FormValidationPatterns.isNumeric,
         }}
-        render={({ field, fieldState: { error } }) => (
-          <FormTextfield
-            label={'Numero di telefono'}
-            formName={'mobile'}
-            type={'text'}
-            field={field}
-            error={error}
-          />
-        )}
+        value={mobile}
+        // eslint-disable-next-line
+        onChange={(phone) => setMobile(phone)}
+        defaultErrorMessage="Questo campo è obbligatorio"
+        isValid={FormValidationPatterns.isNumeric}
       />
+      {error && (
+        <div style={{ width: '100%' }}>
+          <FormHelperText
+            style={{
+              marginLeft: '14px!important',
+              color: 'red',
+            }}
+          >
+            Questo campo è obbligatorio
+          </FormHelperText>
+        </div>
+      )}
       <br />
       <Controller
         name="email"
