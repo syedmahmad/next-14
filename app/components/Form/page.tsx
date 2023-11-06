@@ -147,7 +147,7 @@ const Form = () => {
           }}
           value={mobile}
           // eslint-disable-next-line
-        onChange={(phone) => setMobile(phone)}
+          onChange={(phone) => setMobile(phone)}
           defaultErrorMessage="Questo campo è obbligatorio"
           isValid={FormValidationPatterns.isNumeric}
         />

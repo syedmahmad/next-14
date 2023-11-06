@@ -3,8 +3,26 @@ import '../styles/global.css';
 
 // https://nextjs.org/docs/app/building-your-application/optimizing/metadata
 export const metadata: Metadata = {
-  title: 'Exagon Landing Page',
-  description: 'descirpiton of exagon',
+  title:
+    'Exagon Salon | miglior software gestionale per parrucchieri | centri estetici | SPA, solarium CRM e APP',
+  keywords: [
+    'Software Gestionale',
+    'CRM',
+    'marketing',
+    'gestione',
+    'booking on line',
+    'strategia marketing',
+    'Parrucchieri',
+    'barbieri',
+    'barber',
+    'centri estetici',
+    'spa',
+    'estetica',
+    'solarium',
+    'saloni di bellezza',
+  ],
+  description:
+    'Exagon Salon, miglior software gestionale per parrucchieri, barber, centri estetici, SPA, estetica, solarium CRM APP con oltre 10.500 saloni clienti.',
 };
 
 export default function Layout({ children }) {
