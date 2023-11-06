@@ -10,6 +10,8 @@ interface ExSwitchProps {
   switchType: 'primary' | 'secondary';
   labelPlacement: 'start' | 'end';
   label?: string;
+  // eslint-disable-next-line
+  field?: any;
 }
 
 const ExSwitch = styled((props: ExSwitchProps) => {
@@ -25,6 +27,7 @@ const ExSwitch = styled((props: ExSwitchProps) => {
           disabled={!props.isEnabled}
           disableRipple
           {...props}
+          {...props.field}
         />
       }
       label={<ExFormLabel label={props.label}></ExFormLabel>}

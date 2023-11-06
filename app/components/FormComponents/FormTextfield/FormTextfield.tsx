@@ -101,9 +101,11 @@ const FormTextfield: FC<FormTextfieldProps> = ({
         />
         {!!error && (
           <FormHelperText
-            style={{
-              marginLeft: '14px!important',
+            sx={{
+              marginLeft: '14px',
               color: 'red',
+              marginBottom: '-20px',
+              marginTop: 0,
             }}
           >
             {errorMessageHelper[formName][error.type]}
