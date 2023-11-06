@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -33,6 +33,14 @@ const customers = [
 ];
 
 const OurCustomer = () => {
+  const [mobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth <= 500) {
+      setMobile(true);
+    }
+  }, []);
+
   const settings = {
     dots: false,
     autoplay: true,
@@ -42,6 +50,14 @@ const OurCustomer = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     cssEase: 'linear',
+    pauseOnHover: false,
+  };
+
+  const mobileSettings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     pauseOnHover: false,
   };
 
@@ -62,7 +78,7 @@ const OurCustomer = () => {
           UNISCITI AI +10.000 SALONI CHE HANNO SCELTO DI CAMBIARE A EXAGON SALON
         </h2>
       </div>
-      <Slider {...settings}>
+      <Slider {...(mobile ? mobileSettings : settings)}>
         <div className={styles.imageBox}>
           <Aveda />
         </div>

@@ -82,3 +82,45 @@
     background: #4f68e9;
   }
 }
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 80px 60px;
+  }
+  .imageContainer {
+    left: 40%;
+  }
+}
+
+@media (max-width: 900px) {
+  .imageContainer {
+    top: 460px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 20px 0px 0px;
+  }
+  .imageContainer {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .textContainer {
+    width: 100%;
+    padding: 225px 0 80px;
+  }
+  .displayMain {
+    clip-path: polygon(0 0, 100% 15%, 100% 94%, 0 100%);
+    margin-top: -275px;
+    padding: 0 20px;
+  }
+  .button {
+    width: 100%;
+    padding: 0.625rem 3.125rem;
+  }
+}

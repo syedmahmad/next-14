@@ -5,6 +5,10 @@
   overflow-y: auto;
 }
 
+.formMobileArea {
+  display: none;
+}
+
 .heroSectionBackground {
   background-color: #2645e6;
   height: fit-content;
@@ -69,4 +73,70 @@
 
 .positionRelative {
   position: relative;
+}
+
+@media (max-width: 1200px) {
+  .formArea {
+    top: 140px;
+  }
+}
+
+@media (max-width: 500px) {
+  .formArea {
+    display: none;
+  }
+  .formMobileArea {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 9999;
+    background-color: #fff;
+    animation: swingParent ease-in-out 300ms;
+  }
+  .formMobileAreaHidden {
+    animation: swingParentback ease-in-out 300ms;
+    animation-fill-mode: forwards;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 9999;
+    background-color: #fff;
+    /* display: none; */
+  }
+  .heroSectionBackground {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 95%);
+  }
+  .completeSolutionBackground {
+    clip-path: polygon(0 0, 100% 2%, 100% 98%, 0 100%);
+  }
+  .alreadyChosen {
+    clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0 97%);
+  }
+  .footerSection {
+    clip-path: polygon(50% 0%, 100% 10%, 100% 100%, 0 100%, 0 10%);
+  }
+}
+
+@keyframes swingParent {
+  0% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes swingParentback {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(500px);
+    display: none;
+  }
 }

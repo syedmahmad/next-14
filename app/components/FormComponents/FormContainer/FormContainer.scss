@@ -15,7 +15,10 @@
     z-index: 1;
     padding: 42px 37px 35px;
     transition: flex-basis 500ms ease-in-out;
-
+    @media (max-width: 500px) {
+      padding: 31px;
+      height: calc(100vh - 6.25rem);
+    }
     .badge {
       height: 102px;
       position: absolute;

@@ -19,7 +19,9 @@ const HeroSection = () => {
               internazionali.
             </h4>
             <br />
-            <TrustPilot />
+            <div className={styles.IconDisplay}>
+              <TrustPilot />
+            </div>
           </div>
         </div>
       </div>

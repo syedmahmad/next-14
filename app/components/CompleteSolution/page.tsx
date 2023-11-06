@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './CompleteSolution.module.css';
 import Icon1 from '../../../public/images/svgs/icon1';
 import Icon2 from '../../../public/images/svgs/icon2';
@@ -11,6 +11,7 @@ import Icon7 from '../../../public/images/svgs/icon7';
 import Icon8 from '../../../public/images/svgs/icon8';
 import Icon9 from '../../../public/images/svgs/icon9';
 import { useFocus } from '../../hooks/useFocus';
+import { useOpenModal } from '../../hooks/useOpenModal';
 
 const solutions = [
   {
@@ -71,6 +72,24 @@ const solutions = [
 
 const CompleteSolution = () => {
   const handleClick = useFocus();
+  const [mobile, setMobile] = useState(false);
+  const { show, handleOpen } = useOpenModal();
+
+  useEffect(() => {
+    if (window.innerWidth <= 500) {
+      setMobile(true);
+    }
+  }, []);
+
+  const buttonClick = () => {
+    if (mobile) {
+      if (!show) {
+        handleOpen();
+      }
+    } else {
+      handleClick();
+    }
+  };
 
   return (
     <div className={styles.container}>
@@ -91,7 +110,7 @@ const CompleteSolution = () => {
       <br />
       <br />
       <div className={styles.buttonContainer}>
-        <button className={styles.button} onClick={handleClick}>
+        <button className={styles.button} onClick={buttonClick}>
           richiedi demo GRATUITA
         </button>
       </div>

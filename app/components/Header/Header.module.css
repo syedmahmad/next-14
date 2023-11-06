@@ -99,3 +99,19 @@
     opacity: 0;
   }
 }
+
+@media (max-width: 900px) {
+  .demoButton {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .displayMain {
+    padding: 40px 20px;
+  }
+  .main {
+    width: 100%;
+    padding: 10px 20px;
+  }
+}

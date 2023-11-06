@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import '../styles/global.css';
+import { OpenModalProvider } from './hooks/useOpenModal';
 
 // https://nextjs.org/docs/app/building-your-application/optimizing/metadata
 export const metadata: Metadata = {
@@ -36,7 +37,9 @@ export default function Layout({ children }) {
         />
         <meta charSet="utf-8" />
       </head>
-      <body>{children}</body>
+      <body>
+        <OpenModalProvider>{children}</OpenModalProvider>
+      </body>
     </html>
   );
 }

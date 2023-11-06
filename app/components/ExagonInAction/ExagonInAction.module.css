@@ -67,3 +67,18 @@
     background: #4f68e9;
   }
 }
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 120px 60px 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 80px 20px 210px;
+  }
+  .demoButton {
+    padding: 0.625rem 3.125rem;
+  }
+}

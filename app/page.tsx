@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+import React, { useEffect, useState } from 'react';
 import styles from '../styles/Home.module.css';
 import Header from './components/Header/page';
 import HeroSection from './components/HeroSection/page';
@@ -10,8 +11,20 @@ import AlreadyChosen from './components/AlreadyChosen/page';
 import ExagonInAction from './components/ExagonInAction/page';
 import FooterSection from './components/FooterSection/page';
 import Form from './components/Form/page';
+import MobileCTA from './components/MobileCTA/page';
+import FormMobile from './components/FormMobile/page';
+import { useOpenModal } from './hooks/useOpenModal';
 
 export default function Page() {
+  const [mobile, setMobile] = useState(false);
+  const { show, firstRender } = useOpenModal();
+
+  useEffect(() => {
+    if (window.innerWidth <= 500) {
+      setMobile(true);
+    }
+  }, []);
+
   return (
     <div className={styles.mainContainer} id="main">
       <Header />
@@ -22,6 +35,15 @@ export default function Page() {
         <div className={styles.formArea}>
           <Form />
         </div>
+        {mobile && !firstRender && (
+          <div
+            className={
+              show ? styles.formMobileArea : styles.formMobileAreaHidden
+            }
+          >
+            <FormMobile />
+          </div>
+        )}
       </div>
       <div className={styles.ourCustomerBackground}>
         <OurCustomer />
@@ -44,6 +66,7 @@ export default function Page() {
       <div className={styles.footerSection}>
         <FooterSection />
       </div>
+      {mobile && <MobileCTA />}
     </div>
   );
 }

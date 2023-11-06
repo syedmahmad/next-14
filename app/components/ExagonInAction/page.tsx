@@ -1,12 +1,31 @@
 'use client';
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './ExagonInAction.module.css';
 import ExagonInActionImage from '../../../public/images/pngs/ExagonInActionImage.png';
 import { useFocus } from '../../hooks/useFocus';
+import { useOpenModal } from '../../hooks/useOpenModal';
 
 const ExagonInAction = () => {
   const handleClick = useFocus();
+  const [mobile, setMobile] = useState(false);
+  const { show, handleOpen } = useOpenModal();
+
+  useEffect(() => {
+    if (window.innerWidth <= 500) {
+      setMobile(true);
+    }
+  }, []);
+
+  const buttonClick = () => {
+    if (mobile) {
+      if (!show) {
+        handleOpen();
+      }
+    } else {
+      handleClick();
+    }
+  };
 
   return (
     <div className={styles.container}>
@@ -20,7 +39,7 @@ const ExagonInAction = () => {
       <br />
       <br />
       <div className={styles.centerBox}>
-        <button className={styles.demoButton} onClick={handleClick}>
+        <button className={styles.demoButton} onClick={buttonClick}>
           richiedi demo GRATUITA
         </button>
       </div>

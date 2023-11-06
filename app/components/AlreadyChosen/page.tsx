@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -36,12 +36,28 @@ const customers = [
 ];
 
 const AlreadyChosen = () => {
+  const [mobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth <= 500) {
+      setMobile(true);
+    }
+  }, []);
+
   const settings = {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     prevArrow: <ArrowLeft />,
     nextArrow: <ArrowRight />,
+  };
+
+  const mobileSettings = {
+    arrows: false,
+    dots: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
   };
 
   return (
@@ -51,7 +67,7 @@ const AlreadyChosen = () => {
         <TrustPilot />
       </h2>
       <div className={styles.displayMain}>
-        <Slider {...settings}>
+        <Slider {...(mobile ? mobileSettings : settings)}>
           {customers.map((customer) => (
             <div className={styles.itemContainer} key={customer.description}>
               <InvertedCommas />

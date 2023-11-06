@@ -63,8 +63,6 @@
   font-weight: 500;
   line-height: 1.5rem;
   display: flex;
-  width: 22.66688rem;
-  padding: 0rem 2.67188rem 0rem 2.6825rem;
   justify-content: center;
   align-items: flex-start;
   height: 130px;
@@ -88,4 +86,37 @@
   display: flex !important;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .heading {
+    font-size: 2.125rem;
+  }
+  .subHeading {
+    font-size: 1.1875rem;
+  }
+  .description {
+    font-size: 0.875rem;
+  }
+  .container {
+    padding: 80px 60px 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 40px 20px;
+  }
+  .displayMain {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+  }
+  .box {
+    width: 100%;
+  }
+  .description {
+    height: 60px;
+  }
 }

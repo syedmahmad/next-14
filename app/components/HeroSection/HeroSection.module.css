@@ -54,3 +54,35 @@
   color: #fff;
   margin: 0;
 }
+
+@media (max-width: 1200px) {
+  .heading {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.09375rem; /* 165% */
+    margin: 0;
+  }
+  .displayMain {
+    padding: 80px 60px 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .displayMain {
+    padding: 40px 20px;
+  }
+  .textArea {
+    width: 100%;
+  }
+  .background {
+    display: none;
+  }
+  .IconDisplay {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

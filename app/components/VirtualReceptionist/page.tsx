@@ -1,11 +1,31 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 import styles from './VirtualReceptionist.module.css';
-import VirtualReceptionistImage from '../../../public/images/svgs/virtualReceptionistImage';
+import VirtualReceptionistImage from '../../../public/images/pngs/virtualReceptionist.png';
 import { useFocus } from '../../hooks/useFocus';
+import { useOpenModal } from '../../hooks/useOpenModal';
 
 const VirtualReceptionist = () => {
   const handleClick = useFocus();
+  const [mobile, setMobile] = useState(false);
+  const { show, handleOpen } = useOpenModal();
+
+  useEffect(() => {
+    if (window.innerWidth <= 500) {
+      setMobile(true);
+    }
+  }, []);
+
+  const buttonClick = () => {
+    if (mobile) {
+      if (!show) {
+        handleOpen();
+      }
+    } else {
+      handleClick();
+    }
+  };
 
   return (
     <div className={styles.container}>
@@ -26,13 +46,18 @@ const VirtualReceptionist = () => {
             ridurre al minimo le cancellazioni ed i ritardi delle clienti.
           </p>
           <br />
-          <button className={styles.button} onClick={handleClick}>
+          <button className={styles.button} onClick={buttonClick}>
             richiedi demo GRATUITA
           </button>
         </div>
       </div>
       <div className={styles.imageContainer}>
-        <VirtualReceptionistImage />
+        <Image
+          src={VirtualReceptionistImage}
+          alt="Image"
+          width={550}
+          height={60}
+        />
       </div>
     </div>
   );
