@@ -56,7 +56,7 @@ const AlreadyChosen = () => {
     arrows: false,
     dots: false,
     infinite: true,
-    slidesToShow: 1.3,
+    slidesToShow: 1.2,
     slidesToScroll: 1,
   };
 
