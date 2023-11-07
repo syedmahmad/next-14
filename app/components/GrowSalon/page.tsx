@@ -49,8 +49,8 @@ const GrowSalon = () => {
   const mobileSettings = {
     dots: false,
     autoplay: false,
-    infinite: true,
-    slidesToShow: 2,
+    infinite:false,
+    slidesToShow: 1.5,
     slidesToScroll: 1,
     pauseOnHover: false,
   };
@@ -79,7 +79,7 @@ const GrowSalon = () => {
           </div>
         </div>
         <div className={styles.imageContainer}>
-          <Image src={GrowSalonImage} alt="Image" width={550} height={60} />
+          <Image priority src={GrowSalonImage} alt="Image" width={550} height={60} />
         </div>
         <br />
         <br />
@@ -90,7 +90,7 @@ const GrowSalon = () => {
         </div>
         <Slider {...(mobile ? mobileSettings : settings)}>
           <div className={styles.imageBox}>
-            <Image
+            <Image priority
               src={CorriereDellaSera}
               alt="Image"
               width={230}
@@ -98,10 +98,10 @@ const GrowSalon = () => {
             />
           </div>
           <div className={styles.imageBox}>
-            <Image src={Cosmoprof} alt="Image" width={230} height={60} />
+            <Image priority src={Cosmoprof} alt="Image" width={230} height={60} />
           </div>
           <div className={styles.imageBox}>
-            <Image
+            <Image priority
               src={LogoIstituzionaleCosmeticaItaliaNoSfondo}
               alt="Image"
               width={230}
@@ -109,7 +109,7 @@ const GrowSalon = () => {
             />
           </div>
           <div className={styles.imageBox}>
-            <Image src={Colorami} alt="Image" width={230} height={60} />
+            <Image priority src={Colorami} alt="Image" width={230} height={60} />
           </div>
         </Slider>
       </div>

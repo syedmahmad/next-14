@@ -169,4 +169,7 @@
     padding: 0.625rem 3.125rem;
     margin: 0;
   }
+  .buttonContainer{
+    padding: 0px 0px 40px;
+  }
 }

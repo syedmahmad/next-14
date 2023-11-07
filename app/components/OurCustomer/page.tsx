@@ -55,8 +55,8 @@ const OurCustomer = () => {
 
   const mobileSettings = {
     dots: false,
-    infinite: true,
-    slidesToShow: 1,
+    infinite: false,
+    slidesToShow: 1.5,
     slidesToScroll: 1,
     pauseOnHover: false,
   };

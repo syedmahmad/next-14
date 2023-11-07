@@ -52,7 +52,7 @@ const VirtualReceptionist = () => {
         </div>
       </div>
       <div className={styles.imageContainer}>
-        <Image
+        <Image priority
           src={VirtualReceptionistImage}
           alt="Image"
           width={550}

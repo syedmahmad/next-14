@@ -20,7 +20,7 @@ const Header = () => {
         <div className={styles.buttonContainer}>
           <a href="tel:3333334566">
             <div className={styles.buttonContainer}>
-              <Image src={Phone} alt="Image" width={24} height={24} />
+              <Image priority src={Phone} alt="Image" width={24} height={24} />
               <div className={styles.phoneNumberContainer}>333 3334566</div>
             </div>
           </a>
