@@ -78,7 +78,13 @@ const FormMobile = () => {
       <div className={styles.header}>
         <div className={styles.headerContent}>
           <div className={styles.icon} onClick={handleClose}>
-            <Image priority src={BackIcon} alt={'back-icon'} width={37} height={37} />
+            <Image
+              priority
+              src={BackIcon}
+              alt={'back-icon'}
+              width={37}
+              height={37}
+            />
           </div>
           <div className={styles.heading}>Richiedi demo gratuita</div>
         </div>

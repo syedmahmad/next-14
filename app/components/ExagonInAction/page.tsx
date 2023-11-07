@@ -48,7 +48,13 @@ const ExagonInAction = () => {
       <br />
       <br />
       <div className={styles.centerBox}>
-        <Image priority src={ExagonInActionImage} alt="Image" width={783} height={60} />
+        <Image
+          priority
+          src={ExagonInActionImage}
+          alt="Image"
+          width={783}
+          height={60}
+        />
       </div>
     </div>
   );

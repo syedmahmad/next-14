@@ -120,7 +120,7 @@
   .footerSection {
     clip-path: polygon(50% 0%, 100% 10%, 100% 100%, 0 100%, 0 10%);
   }
-  .growSalon{
+  .growSalon {
     padding: 0 0 50px;
   }
 }
